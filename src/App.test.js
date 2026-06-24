@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders Reserve a Table heading", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const heading = screen.getAllByText(/Reserve a Table/i)[0]; // Since there's a link and a heading with this text
+  expect(heading).toBeInTheDocument();
+});
+
+test("renders booking form submit button", () => {
+  render(<App />);
+  const button = screen.getByText(/Make Your Reservation/i);
+  expect(button).toBeInTheDocument();
 });

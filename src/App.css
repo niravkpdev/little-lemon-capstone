@@ -1,38 +1,117 @@
-.App {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #333;
+}
+
+.header {
+  background: #495e57;
+  color: white;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  color: #f4ce14;
+}
+
+.header nav a {
+  color: white;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 70px 60px;
+  background: #495e57;
+  color: white;
+  align-items: center;
+}
+
+.hero h2 {
+  color: #f4ce14;
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero h3 {
+  font-size: 28px;
+}
+
+.hero img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.primary-button,
+.booking-form button {
+  background: #f4ce14;
+  color: #333;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.about,
+.booking {
+  padding: 60px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.booking-form {
+  max-width: 450px;
+  margin: auto;
+  display: grid;
+  gap: 15px;
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.booking-form input,
+.booking-form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+footer {
+  background: #333;
   color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 768px) {
+  .header,
+  .hero {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .hero {
+    display: block;
+  }
+
+  .header nav a {
+    display: block;
+    margin: 10px 0;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-message {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #495e57;
 }
